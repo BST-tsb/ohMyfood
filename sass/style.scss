@@ -28,6 +28,22 @@ $background-color: #F6F6F6;
         opacity: 1;
     }
 }
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes delete {
+    0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0);
+      }
+} 
 
 * {
     box-sizing: border-box;
@@ -40,6 +56,37 @@ body {
     margin-left: auto;
     margin-right: auto;
     
+}
+.container {
+    background-color: white;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    animation: delete 0s forwards 2.5s;
+}
+.loader {
+    border: 10px solid $background-color;
+    border-left: 10px solid $primary-color;
+    border-right: 10px solid $secondary-color;
+    border-top: 10px solid $tertiary-color;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 1.5s linear 5;
+    z-index: 1;
+
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+
 }
 
 .header {
