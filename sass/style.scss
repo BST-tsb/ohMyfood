@@ -2,6 +2,7 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $background-color: #F6F6F6;
+$gradient : linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 @mixin flex-center {
     display: flex;
     justify-content: center;
@@ -16,7 +17,7 @@ $background-color: #F6F6F6;
     margin-right: auto;
 }
 @mixin btn {
-    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    background: $gradient;
     border-radius: 25px;
     color: white;
 }
@@ -76,7 +77,7 @@ body {
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    animation: spin 1.5s linear 5;
+    animation: spin 1.5s linear 2;
     z-index: 1;
 
     margin: auto;
@@ -91,7 +92,7 @@ body {
 
 .header {
     @include flex-center();
-    margin: 12px 0;
+    margin: 16px 0;
     position: relative;
     .header__logo {
         .header__logo--img{
@@ -133,6 +134,10 @@ body {
         padding: 15px 10px;
         text-align: center;
         text-decoration: none;
+        &:hover {
+            opacity: 85%;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.55);
+        }
     }
 }
 .process {
@@ -151,6 +156,7 @@ body {
             gap: 20px;
             position: relative;
             padding: 5px 20px 5px 0;
+            min-width: 27%;
             .process__number {
                 left: -10px;
                 position: absolute;
@@ -164,6 +170,9 @@ body {
             }
             .fa-solid {
                 margin-left: 30px;
+            }
+            .fa-store {
+                color: $primary-color;
             }
         }
         @media (min-width: 768px) {
@@ -179,6 +188,9 @@ body {
     
     h2 {
         @include width-center();
+        @media (min-width: 768px) {
+            width: 85%;
+        }
     }
     .restaurant__cont{
         @include width-center();
@@ -237,9 +249,13 @@ body {
                 margin: 0 10px;
                 h3 {
                     margin: 8px 0;
+                    font-size: 1.125em;
+                    font-weight: 700;
                 }
                 p {
                     margin-top: 0;
+                    font-size: 17px;
+                    font-weight: 300;
                 }
                 .stack {
                     position: relative;
@@ -251,14 +267,18 @@ body {
                         padding: 0px;
                         transform: scale(0.0);
                         transition-property: transform;
-                        bottom: 2px;
-                        left: 0px;
+                        bottom: 2.6px;
+                        left: 0.5px;
+                        font-size: 25px;
                     
                     }
                     &:hover > .anim {
-                        background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-                        transform: scale(1.1);
+                        background: $gradient;
+                        transform: scale(1.06);
                         -webkit-background-clip: text;
+                    }
+                    .start {
+                        font-size: 25px;
                     }
                     
                 }
@@ -281,12 +301,15 @@ body {
     }
     .footer__logo {
         height: 1.688em;
+        width: 8.563em;
         img {
             height: 100%;
+            width: 100%;
             filter: invert(1);
         }
         @media (min-width: 768px) {
             margin-right: 35px;
+            margin-left: 60px;
         }
     }
     .footer__list {
@@ -299,10 +322,12 @@ body {
             flex-direction: row;
             gap: 35px;
         }
-        li {
+        a {
             display: flex;
             gap: 6px;
             align-items: center;
+            color: white;
+            text-decoration: none;
         }
     }
 }
@@ -329,6 +354,7 @@ body {
         margin-right: auto;
         z-index: 2;
         margin-top: -32px;
+        padding-bottom: 1px;
         .menu__cont--title {
             display: flex;
             align-items: center;
@@ -336,7 +362,7 @@ body {
             width: 95%;
             margin-left: auto;
             margin-right: auto;
-            font-size: 1.750em;
+            
             @media (min-width: 768px) {
                 justify-content: center;
                 gap: 25px;
@@ -345,6 +371,7 @@ body {
                 font-family: Shrikhand;
                 font-style: italic;
                 font-weight: 400;
+                font-size: 1.750em;
             }
             .stack {
                 position: relative;
@@ -356,14 +383,18 @@ body {
                     padding: 0px;
                     transform: scale(0.0);
                     transition-property: transform;
-                    bottom: 3px;
+                    bottom: 0px;
                     left: 0px;
+                    font-size: 1.750em;
                 
                 }
                 &:hover > .anim {
-                    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-                    transform: scale(1.1);
+                    background: $gradient;
+                    transform: scale(1.06);
                     -webkit-background-clip: text;
+                }
+                .start {
+                    font-size: 1.750em;
                 }
                 
             }
@@ -376,6 +407,7 @@ body {
             width: 95%;
             margin-left: auto;
             margin-right: auto;
+            margin-bottom: 25px;
             @media (min-width: 768px) {
                 width: 65%;
             }
@@ -388,20 +420,38 @@ body {
                 width: 40px;
                 height: 0.25em;
                 background-color: $tertiary-color;
-                margin: 0;
+                margin: -6px 0 3px 0;
                 padding: 0;
-            }
-            .menu__cont--art:nth-child(3){
+            } 
+            .anim1 {
                 animation: apparition 0.8s 0.2s ease-out forwards;
             }
-            .menu__cont--art:nth-child(4){
+            .anim2{
                 animation: apparition 0.8s 0.4s ease-out forwards;
             }
-            .menu__cont--art:nth-child(5){
+            .anim3{
                 animation: apparition 0.8s 0.6s ease-out forwards;
             }
-            .menu__cont--art:nth-child(6){
+            .anim4{
                 animation: apparition 0.8s 0.8s ease-out forwards;
+            }
+            .anim5{
+                animation: apparition 0.8s 1.0s ease-out forwards;
+            }
+            .anim6{
+                animation: apparition 0.8s 1.2s ease-out forwards;
+            }
+            .anim7{
+                animation: apparition 0.8s 1.4s ease-out forwards;
+            }
+            .anim8{
+                animation: apparition 0.8s 1.6s ease-out forwards;
+            }
+            .anim9{
+                animation: apparition 0.8s 1.8s ease-out forwards;
+            }
+            .anim10{
+                animation: apparition 0.8s 2.0s ease-out forwards;
             }
             .menu__cont--art {
                 @include box-shadow();
@@ -429,12 +479,16 @@ body {
                             height: 24%;
                             font-weight: 500;
                             font-size: 18px;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
                         }
                         p {
                             height: 20%;
                             font-weight: 300;
                             font-size: 15px;
                             overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
                         }
                     }
                     .menu__cont--price {
@@ -476,7 +530,7 @@ body {
             width: 100%;
             display: flex;
             justify-content: center;
-            margin: 25px 0;
+            margin: 40px 0;
             .menu__cont--btn{
                 @include btn();
                 @include box-shadow();
@@ -484,6 +538,10 @@ body {
                 padding: 15px 10px;
                 text-align: center;
                 text-decoration: none;
+                &:hover {
+                    opacity: 85%;
+                    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.55);
+                }
             }
         }
         
