@@ -1,0 +1,21 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin background-color {
+    background-color: $background-color;
+}
+@mixin width-center {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@mixin btn {
+    background: $gradient;
+    border-radius: 25px;
+    color: white;
+}
+@mixin box-shadow {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}

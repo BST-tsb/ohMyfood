@@ -1,50 +1,6 @@
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
-$background-color: #F6F6F6;
-$gradient : linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@mixin background-color {
-    background-color: $background-color;
-}
-@mixin width-center {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
-@mixin btn {
-    background: $gradient;
-    border-radius: 25px;
-    color: white;
-}
-@mixin box-shadow {
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-}
-@keyframes apparition {
-    100%{
-        opacity: 1;
-    }
-}
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-@keyframes delete {
-    0% {
-        transform: scale(1);
-      }
-      100% {
-        transform: scale(0);
-      }
-} 
+@import 'var';
+@import 'mixin';
+@import 'keyframes';
 
 * {
     box-sizing: border-box;
@@ -254,7 +210,7 @@ body {
                 }
                 p {
                     margin-top: 0;
-                    font-size: 17px;
+                    font-size: 1.063em;
                     font-weight: 300;
                 }
                 .stack {

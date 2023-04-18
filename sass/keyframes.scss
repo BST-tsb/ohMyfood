@@ -1,0 +1,21 @@
+@keyframes apparition {
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes delete {
+    0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0);
+      }
+} 
