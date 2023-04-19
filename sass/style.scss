@@ -74,7 +74,7 @@ body {
     h1 {
         width: 90%;
         text-align: center;
-        font-size: 1.500em;
+        font-size: 2.5em;
     }
     p {
         width: 90%;
@@ -130,6 +130,9 @@ body {
             .fa-store {
                 color: $primary-color;
             }
+            .process__text {
+                font-weight: 500;
+            }
         }
         @media (min-width: 768px) {
             display: flex;
@@ -144,9 +147,7 @@ body {
     
     h2 {
         @include width-center();
-        @media (min-width: 768px) {
-            width: 85%;
-        }
+        
     }
     .restaurant__cont{
         @include width-center();
@@ -156,7 +157,6 @@ body {
         @media (min-width: 768px) {
             flex-direction: row;
             width: 95%;
-            margin-right: 0;
             gap: 45px;
             justify-content: center;
             flex-wrap: wrap;
@@ -223,14 +223,14 @@ body {
                         padding: 0px;
                         transform: scale(0.0);
                         transition-property: transform;
-                        bottom: 2.6px;
+                        bottom: 1.5px;
                         left: 0.5px;
                         font-size: 25px;
                     
                     }
                     &:hover > .anim {
                         background: $gradient;
-                        transform: scale(1.06);
+                        transform: scale(1.07);
                         -webkit-background-clip: text;
                     }
                     .start {
