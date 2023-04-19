@@ -96,7 +96,7 @@ body {
 .explore h1 {
   width: 90%;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2.5em;
 }
 .explore p {
   width: 90%;
@@ -156,6 +156,9 @@ body {
 .process .process__cont .process__step .fa-store {
   color: #9356DC;
 }
+.process .process__cont .process__step .process__text {
+  font-weight: 500;
+}
 @media (min-width: 768px) {
   .process .process__cont {
     display: flex;
@@ -172,11 +175,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-@media (min-width: 768px) {
-  .restaurant h2 {
-    width: 85%;
-  }
-}
 .restaurant .restaurant__cont {
   width: 90%;
   margin-left: auto;
@@ -189,7 +187,6 @@ body {
   .restaurant .restaurant__cont {
     flex-direction: row;
     width: 95%;
-    margin-right: 0;
     gap: 45px;
     justify-content: center;
     flex-wrap: wrap;
@@ -260,13 +257,13 @@ body {
   padding: 0px;
   transform: scale(0);
   transition-property: transform;
-  bottom: 2.6px;
+  bottom: 1.5px;
   left: 0.5px;
   font-size: 25px;
 }
 .restaurant .restaurant__cont .restaurant__art .restaurant__cont-info .stack:hover > .anim {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  transform: scale(1.06);
+  transform: scale(1.07);
   -webkit-background-clip: text;
 }
 .restaurant .restaurant__cont .restaurant__art .restaurant__cont-info .stack .start {
